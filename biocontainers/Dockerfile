@@ -52,6 +52,7 @@ RUN apt-get clean all && \
         libxext6        \
         libsm6          \
         libxrender1     \
+	locales		\
         git             \
         mercurial       \
         subversion      \
