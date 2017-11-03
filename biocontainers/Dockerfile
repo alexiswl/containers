@@ -83,8 +83,10 @@ RUN groupadd fuse && \
 
 # give write permissions to conda folder
 RUN chmod 777 -R /opt/conda/
+
 # Update locales
 RUN dpkg-reconfigure locales
+RUN locale-gen
 
 # Change user
 USER biodocker
