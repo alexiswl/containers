@@ -85,13 +85,14 @@ RUN groupadd fuse && \
 RUN chmod 777 -R /opt/conda/
 
 # Update locales
+RUN locale-gen en_US.UTF-8
 RUN dpkg-reconfigure locales
-RUN locale-gen
+RUN echo LANG=en_US.UTF-8 > /etc/default/locale
 
 # Change user
 USER biodocker
 
-ENV PATH=$PATH:/opt/conda/bin
+ENV PATH=/opt/conda/bin:$PATH
 ENV PATH=$PATH:/home/biodocker/bin
 ENV HOME=/home/biodocker
 
