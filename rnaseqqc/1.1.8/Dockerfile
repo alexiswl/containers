@@ -23,11 +23,6 @@ RUN conda install -c bioconda java-jdk=7.0.91
 # Install without upgrading to Java1.8
 RUN conda install -c bioconda --no-deps rna-seqc=1.1.8
 
-# Source environment
-ENV LANG=en_US.UTF-8
-ENV LANGUAGE=en_US:en
-ENV LC_ALL=en_US.UTF-8
-
 WORKDIR /data/
 
 ENTRYPOINT ["rna-seqc"]
