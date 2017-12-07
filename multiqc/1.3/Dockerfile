@@ -15,7 +15,7 @@ LABEL tags="Genomics"
 # Maintainer
 MAINTAINER Alexis Lucattini <alexis.lucattini@agrf.org.au>
 
-RUN conda install -c bioconda multiqc=1.3
+RUN conda install -c bioconda multiqc=1.3 -y
 
 WORKDIR /data/
 
