@@ -48,5 +48,7 @@ RUN TEMP_DEB="$(mktemp)" && \
 # Reset apt
 RUN sudo apt-get -f install
 
+WORKDIR /data
+
 # Run the albacore command from entry point
 ENTRYPOINT ['read_fast5_basecaller.py']
