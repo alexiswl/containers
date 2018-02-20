@@ -15,9 +15,10 @@ LABEL tags="Genomics"
 # Maintainer
 MAINTAINER Alexis Lucattini <alexis.lucattini@agrf.org.au>
 
-RUN conda install -c conda-forge lzstring=1.0.3 -y
-RUN conda install -c conda-forge spectra=0.0.10 -y
-RUN conda install -c bioconda multiqc=1.4 -y
+RUN conda install -c anaconda libgfortran==1 -y
+RUN conda install -c conda-forge lzstring==1.0.3 -y
+RUN conda install -c conda-forge spectra==0.0.10 -y
+RUN conda install -c bioconda multiqc==1.4 -y
 
 WORKDIR /data/
 
