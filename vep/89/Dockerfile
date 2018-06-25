@@ -15,8 +15,8 @@ LABEL tags="Genomics"
 # Maintainer
 MAINTAINER Alexis Lucattini <alexis.lucattini@agrf.org.au>
 
-RUN conda install -c bioconda htslib=1.5.0
-RUN conda install -c bioconda vep=89.4
+RUN conda install -c bioconda htslib=1.5.0 --yes
+RUN conda install -c bioconda vep=89.4 --yes
 
 WORKDIR /data/
 
