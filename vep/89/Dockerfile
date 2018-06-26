@@ -15,6 +15,7 @@ LABEL tags="Genomics"
 # Maintainer
 MAINTAINER Alexis Lucattini <alexis.lucattini@agrf.org.au>
 
+RUN conda install -c bioconda perl=5.22.0 --yes
 RUN conda install -c bioconda htslib=1.5.0 --yes
 RUN conda install -c bioconda ensembl-vep=89.4 --yes
 
