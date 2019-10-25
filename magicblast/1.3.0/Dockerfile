@@ -1,16 +1,19 @@
 ################## BASE IMAGE ######################
-FROM biocontainers/biocontainers:latest
+FROM biocontainers/biocontainers:v1.0.0_cv4
 
 ################## METADATA ######################
-LABEL base.image="biocontainers:latest"
-LABEL version="3"
+
+LABEL base_image="biocontainers:v1.0.0_cv4"
+LABEL version="5"
 LABEL software="magicblast"
 LABEL software.version="1.3.0"
-LABEL description="Magic-BLAST is a new tool for mapping large sets of next-generation RNA or DNA sequencing runs against a whole genome or transcriptome"
-LABEL website="https://github.com/ncbi/magicblast"
-LABEL documentation="https://ncbi.github.io/magicblast/"
-LABEL License_file = /home/biodocker/bin/LICENSE
-LABEL tags="BLAST"
+LABEL about.summary="Magic-BLAST is a new tool for mapping large sets of next-generation RNA or DNA sequencing runs against a whole genome or transcriptome"
+LABEL about.home="https://github.com/ncbi/magicblast"
+LABEL about.documentation="https://ncbi.github.io/magicblast/"
+LABEL about.license_file="https://ncbi.github.io/magicblast/dev/copyright.html"
+LABEL about.license="SPDX:MIT"
+LABEL about.tags="BLAST"
+LABEL extra.binaries="magicblast"
 
 
 ################## MAINTAINER ######################
@@ -33,4 +36,4 @@ RUN cd $DST && \
 
 WORKDIR /data/
 
-CMD ["magicblast"]
+# CMD ["magicblast"]

@@ -1,17 +1,19 @@
 ################## BASE IMAGE ######################
 
-FROM biocontainers/biocontainers:latest
+FROM biocontainers/biocontainers:v1.0.0_cv4
 
 ################## METADATA ######################
-LABEL base.image="biocontainers:latest"
-LABEL version="1"
+LABEL base_image="biocontainers:v1.0.0_cv4"
+LABEL version="3"
 LABEL software="gapcloser"
 LABEL software.version="1.12-r6"
-LABEL description="A novel short-read assembly method that can build a de novo draft assembly for the human-sized genomes"
-LABEL website="http://soap.genomics.org.cn/gapcloser.html"
-LABEL documentation="http://soap.genomics.org.cn/gapcloser.html"
-LABEL license="http://soap.genomics.org.cn/gapcloser.html"
-LABEL tags="Genomics"
+LABEL about.summary="A novel short-read assembly method that can build a de novo draft assembly for the human-sized genomes"
+LABEL about.home="http://soap.genomics.org.cn/gapcloser.html"
+LABEL about.documentation="http://soap.genomics.org.cn/gapcloser.html"
+LABEL about.license_file="http://soap.genomics.org.cn/gapcloser.html"
+LABEL about.license="SPDX:GPL-3.0-only"
+LABEL about.tags="Genomics"
+LABEL extra.binaries="GapCloser"
 
 ################## INSTALLATION ######################
 ################## BEGIN INSTALLATION ######################
@@ -28,7 +30,7 @@ RUN wget $URL/$ZIP -O $DST/$ZIP && \
 WORKDIR /data
 
 # DEFINE DEFAULT COMMAND
-CMD ["GapCloser"]
+# CMD ["GapCloser"]
 
 ##################### INSTALLATION END #####################
 

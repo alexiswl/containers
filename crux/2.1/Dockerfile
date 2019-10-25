@@ -1,16 +1,18 @@
 ################## BASE IMAGE ######################
-FROM biocontainers/biocontainers:latest
+FROM biocontainers/biocontainers:v1.0.0_cv4
 
 ################## METADATA ######################
-LABEL base.image="biocontainers:latest"
-LABEL version="2"
+LABEL base_image="biocontainers:v1.0.0_cv4"
+LABEL version="3"
 LABEL software="crux"
 LABEL software.version="2.1"
-LABEL description="a software toolkit for tandem mass spectrometry analysis"
-LABEL website="http://cruxtoolkit.sourceforge.net/"
-LABEL documentation="http://cruxtoolkit.sourceforge.net/"
-LABEL license="http://cruxtoolkit.sourceforge.net/"
-LABEL tags="Proteomics"
+LABEL about.summary="a software toolkit for tandem mass spectrometry analysis"
+LABEL about.home="http://cruxtoolkit.sourceforge.net/"
+LABEL about.documentation="http://cruxtoolkit.sourceforge.net/"
+LABEL about.license_file="http://cruxtoolkit.sourceforge.net/"
+LABEL about.license="SPDX:Apache-2.0"
+LABEL extra.identifiers.biotools="crux"
+LABEL about.tags="Proteomics"
 
 ################## MAINTAINER ######################
 MAINTAINER Felipe da Veiga Leprevost <felipe@leprevost.com.br>

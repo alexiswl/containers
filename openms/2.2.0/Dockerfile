@@ -1,17 +1,19 @@
 ################## BASE IMAGE ######################
 
-FROM biocontainers/biocontainers:latest
+FROM biocontainers/biocontainers:v1.0.0_cv4
 
 ################## METADATA ######################
-LABEL base.image="biocontainers:latest"
-LABEL version="2.2"
+LABEL base_image="biocontainers:v1.0.0_cv4"
+LABEL version="3"
 LABEL software="OpenMS"
-LABEL software.version="2.2"
-LABEL description="C++ libraries ans tools for MS/MS data analysis"
-LABEL website="http://www.openms.org/"
-LABEL documentation="http://ftp.mi.fu-berlin.de/pub/OpenMS/release2.2.0-documentation/html/index.html"
-LABEL license="http://www.openms.org/"
-LABEL tags="Proteomics"
+LABEL software.version="2.2.0"
+LABEL about.summary="C++ libraries ans tools for MS/MS data analysis"
+LABEL about.home="http://www.openms.org/"
+LABEL about.documentation="http://ftp.mi.fu-berlin.de/pub/OpenMS/release2.2.0-about.documentation/html/index.html"
+LABEL about.license_file="https://github.com/OpenMS/OpenMS/blob/develop/LICENSE"
+LABEL about.license="SPDX:BSD-1-Clause"
+LABEL about.tags="Proteomics"
+LABEL extra.identifiers.biotools="openms"
 
 ################## MAINTAINER ######################
 MAINTAINER Hannes Rost <hannes.rost@utoronto.ca>

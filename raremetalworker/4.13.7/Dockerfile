@@ -1,16 +1,18 @@
 ################## BASE IMAGE ######################
-FROM biocontainers/biocontainers:latest
+FROM biocontainers/biocontainers:v1.0.0_cv4
 
 ################## METADATA ######################
-LABEL base.image="biocontainers:latest"
-LABEL version="1"
+LABEL base_image="biocontainers:v1.0.0_cv4"
+LABEL version="3"
 LABEL software="raremetalworker"
 LABEL software.version="4.13.7"
-LABEL description="single variant analysis, generating summary statistics for gene level meta analyses"
-LABEL website="http://genome.sph.umich.edu/wiki/RAREMETALWORKER"
-LABEL documentation=" http://genome.sph.umich.edu/wiki/RAREMETALWORKER"
-LABEL license=" http://genome.sph.umich.edu/wiki/RAREMETALWORKER"
-LABEL tags="Genomics"
+LABEL about.summary="single variant analysis, generating summary statistics for gene level meta analyses"
+LABEL about.home="http://genome.sph.umich.edu/wiki/RAREMETALWORKER"
+LABEL about.documentation="http://genome.sph.umich.edu/wiki/RAREMETALWORKER|https://github.com/statgen/Raremetal"
+LABEL about.license_file="http://genome.sph.umich.edu/wiki/RAREMETALWORKER"
+LABEL about.tags="Genomics"
+LABEL extra.identifiers.biotools="RAREMETAL"
+LABEL extra.binaries="raremetal"
 
 
 ################## BEGIN INSTALLATION ######################
@@ -33,7 +35,7 @@ USER biodocker
 WORKDIR /data
 
 # DEFINE DEFAULT COMMAND
-CMD ["raremetal"]
+# CMD ["raremetal"]
 
 ################## MAINTAINER ######################
 

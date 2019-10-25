@@ -1,16 +1,17 @@
 ################## BASE IMAGE ######################
-FROM biocontainers/biocontainers:latest
+FROM biocontainers/biocontainers:v1.0.0_cv4
 
 ################## METADATA ######################
-LABEL base.image="biocontainers:latest"
-LABEL version="3"
+LABEL base_image="biocontainers:v1.0.0_cv4"
+LABEL version="4"
 LABEL software="DIA-Umpire"
 LABEL software.version="2.1.2"
-LABEL description="computational analysis of data independent acquisition (DIA) mass spectrometry-based proteomics data"
-LABEL website="http://diaumpire.sourceforge.net"
-LABEL documentation="http://diaumpire.sourceforge.net"
-LABEL license="http://diaumpire.sourceforge.net"
-LABEL tags="Proteomics"
+LABEL about.summary="computational analysis of data independent acquisition (DIA) mass spectrometry-based proteomics data"
+LABEL about.home="http://diaumpire.sourceforge.net"
+LABEL about.documentation="http://diaumpire.sourceforge.net"
+LABEL about.license_file="http://diaumpire.sourceforge.net"
+LABEL about.license="SPDX:Apache-2.0"
+LABEL about.tags="Proteomics"
 
 ################## MAINTAINER ######################
 MAINTAINER Felipe da Veiga Leprevost <felipe@leprevost.com.br>

@@ -1,21 +1,21 @@
-#################################################################
-# Dockerfile
-#
-# Version:          1
-# Software:         GATK
-# Software Version: 3.4
-# Description:      The Genome Analysis Toolkit or GATK is a software package developed at the Broad Institute to analyze high-throughput sequencing data.
-# Website:          https://www.broadinstitute.org/gatk/|https://github.com/broadgsa/gatk-protected/
-# Tags:             Genomics
-# Provides:         gatk 3.4|samtools 1.2|bwakit 0.7.12|picard tools 1.139
-################## BASE IMAGE ###################### :       java:7
-# Build Cmd:        docker build --rm -t biodckrdev/gatk 3.4/.
-# Pull Cmd:         docker pull biodckrdev/gatk
-# Run Cmd:          docker run --rm -it biodckrdev/gatk <options> <files>
-#################################################################
-#SOURCE: https://github.com/giantswarm/giantswarm-gatk/blob/master/Dockerfile
-# Source Image
+############################## Dockerfile ###################################
+
 FROM java:7
+
+###################################### METADATA ##############################
+
+LABEL base_image="biocontainers:latest" \
+  version="2" \
+  software="gatk" \
+  software.version="3.4" \
+  about.summary="The Genome Analysis Toolkit or GATK is a software package developed at the Broad Institute to analyze high-throughput sequencing data." \
+  about.home="https://www.broadinstitute.org/gatk/|https://github.com/broadgsa/gatk-protected/" \
+  about.license_file="https://github.com/broadgsa/gatk-protected/blob/master/licensing/protected_license.txt" \
+  about.license="SPDX:BSD-3-Clause" \
+  about.tags="Genomics" \
+  extra.identifiers.biotools="gatk" \
+  extra.binaries="GenomeAnalysisTK" \
+  about.provides="gatk 3.4|samtools 1.2|bwakit 0.7.12|picard tools 1.139"
 
 # Set noninterative mode
 ENV DEBIAN_FRONTEND noninteractive
@@ -25,8 +25,6 @@ ENV DEBIAN_FRONTEND noninteractive
 # Change to root
 #
 USER root
-
-
 
 #
 # INSTALL MAVEN
@@ -158,7 +156,7 @@ VOLUME ["/data", "/config"]
 
 
 
-CMD ["GenomeAnalysisTK"]
+# CMD ["GenomeAnalysisTK"]
 
 ##################### INSTALLATION END #####################
 

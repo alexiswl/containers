@@ -1,16 +1,17 @@
 ################## BASE IMAGE ######################
-FROM biocontainers/biocontainers:latest
+FROM biocontainers/biocontainers:v1.0.0_cv4
 
 ################## METADATA ######################
-LABEL base.image="biocontainers:latest"
-LABEL version="1"
+LABEL base_image="biocontainers:v1.0.0_cv4"
+LABEL version="2"
 LABEL software="cava"
 LABEL software.version="1.1.1"
-LABEL description="lightweight, fast and flexible NGS variant annotation tool"
-LABEL website="http://www.well.ox.ac.uk/cava"
-LABEL documentation="http://www.well.ox.ac.uk/cava"
-LABEL license="http://www.well.ox.ac.uk/cava"
-LABEL tags="Genomics"
+LABEL about.summary="lightweight, fast and flexible NGS variant annotation tool"
+LABEL about.home="http://www.well.ox.ac.uk/cava"
+LABEL about.documentation="http://www.well.ox.ac.uk/cava"
+LABEL about.license_file="http://www.well.ox.ac.uk/cava"
+LABEL about.license="SPDX:GPL-3.0"
+LABEL about.tags="Genomics"
 
 ################## MAINTAINER ######################
 

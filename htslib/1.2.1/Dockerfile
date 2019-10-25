@@ -1,21 +1,21 @@
-#################################################################
-# Dockerfile
-#
-# Version:          1
-# Software:         htslib
-# Software Version: 1.2.1
-# Description:      C library for high-throughput sequencing data formats
-# Website:          https://github.com/samtools/htslib
-# Provides:         htslib 1.2.1
-# Tags:             Genomics
-################## BASE IMAGE ###################### :       biodckr/biodocker
-# Build Cmd:        docker build --rm -t biodckrdev/htslib 1.2.1/.
-# Pull Cmd:         docker pull biodckrdev/htslib
-# Run Cmd:          docker run --rm -it biodckrdev/htslib <options> <files>
-#################################################################
+############################### Dockerfile ##################################
 
-# Set the base image to Ubuntu
-FROM biodckr/biodocker
+FROM biocontainers/biocontainers:v1.0.0_cv4
+
+################################# METADATA ###################################
+
+LABEL base_image="biocontainers:v1.0.0_cv4"
+LABEL version="3"
+LABEL software="htslib"
+LABEL software.version="1.2.1"
+LABEL about.summary="C library for high-throughput sequencing data formats"
+LABEL about.home="https://github.com/samtools/htslib"
+LABEL about.provides="htslib 1.2.1"
+LABEL about.license_file="https://github.com/samtools/htslib/blob/develop/LICENSE"
+LABEL about.license="SPDX:MIT"
+LABEL about.tags="Genomics"
+LABEL extra.identifiers.biotools="HTSlib"
+LABEL extra.binaries="tabix"
 
 ################## BEGIN INSTALLATION ######################
 
@@ -43,7 +43,7 @@ USER biodocker
 WORKDIR /data
 
 # DEFINE DEFAULT COMMAND
-CMD ["tabix"]
+# CMD ["tabix"]
 
 ##################### INSTALLATION END #####################
 

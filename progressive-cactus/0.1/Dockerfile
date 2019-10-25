@@ -1,15 +1,16 @@
 FROM biocontainers/biocontainers:08252016-4
 
-LABEL base.image="biocontainers:08252016-4"
-LABEL version="1"
+LABEL base_image="biocontainers:08252016-4"
+LABEL version="2"
 LABEL software="progressiveCactus"
 LABEL software.version="0.1"
-LABEL description="multiple whole-genome alignment package"
-LABEL website="https://github.com/glennhickey/progressiveCactus"
-LABEL documentation="https://github.com/glennhickey/progressiveCactus"
-LABEL license="GPL-3.0"
-LABEL license_file="https://github.com/glennhickey/progressiveCactus/blob/master/LICENSE"
-LABEL tags="genomics"
+LABEL about.summary="multiple whole-genome alignment package"
+LABEL about.home="https://github.com/glennhickey/progressiveCactus"
+LABEL about.documentation="https://github.com/glennhickey/progressiveCactus"
+LABEL about.license="SPDX:GPL-3.0"
+LABEL about.license_file="https://github.com/glennhickey/progressiveCactus/blob/master/LICENSE"
+LABEL about.tags="Genomics"
+LABEL extra.binaries="runProgressiveCactus.sh"
 
 MAINTAINER Ricky Lim <rlim.email@gmail.com>
 
@@ -28,7 +29,7 @@ USER biodocker
 
 RUN git clone git://github.com/glennhickey/progressiveCactus.git && \
     cd progressiveCactus && \
-    git checkout tags/0.1 -b 0.1 && \
+    git checkout about.tags/0.1 -b 0.1 && \
     git submodule update --init
 
 WORKDIR /home/biodocker/bin/progressiveCactus
@@ -39,5 +40,5 @@ ENV PATH /home/biodocker/bin/progressiveCactus/bin:$PATH
 
 WORKDIR /data/
 
-CMD ["runProgressiveCactus.sh", "-h"]
+# CMD ["runProgressiveCactus.sh", "-h"]
 

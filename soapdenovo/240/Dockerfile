@@ -1,16 +1,18 @@
 ################## BASE IMAGE ######################
-FROM biocontainers/biocontainers:latest
+FROM biocontainers/biocontainers:v1.0.0_cv4
 
 ################## METADATA ######################
-LABEL base.image="biocontainers:latest"
-LABEL version="1"
+LABEL base_image="biocontainers:v1.0.0_cv4"
+LABEL version="2"
 LABEL software="soapdenovo"
 LABEL software.version="240"
-LABEL description="a novel short-read assembly method that can build a de novo draft assembly for the human-sized genomes"
-LABEL website="http://soap.genomics.org.cn/soapdenovo.html"
-LABEL documentation="http://soap.genomics.org.cn/soapdenovo.html"
-LABEL license="http://soap.genomics.org.cn/soapdenovo.html"
-LABEL tags="Proteomics"
+LABEL about.summary="a novel short-read assembly method that can build a de novo draft assembly for the human-sized genomes"
+LABEL about.home="http://soap.genomics.org.cn/soapdenovo.html"
+LABEL about.documentation="http://soap.genomics.org.cn/soapdenovo.html"
+LABEL about.license_file="http://soap.genomics.org.cn/soapdenovo.html"
+LABEL about.license="SPDX:GPL-3.0-only"
+LABEL about.tags="Proteomics"
+LABEL extra.identifiers.biotools="soapdenovo"
 
 ################## MAINTAINER ######################
 MAINTAINER Saulo Alves Aflitos <sauloal@gmail.com>

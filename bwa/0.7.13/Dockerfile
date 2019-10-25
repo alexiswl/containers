@@ -1,16 +1,18 @@
 ################## BASE IMAGE ######################
-FROM biocontainers/biocontainers:latest
+FROM biocontainers/biocontainers:v1.0.0_cv4
 
 ################## METADATA ######################
-LABEL base.image="biocontainers:latest"
-LABEL version="2"
+LABEL base_image="biocontainers:v1.0.0_cv4"
+LABEL version="3"
 LABEL software="bwa"
 LABEL software.version="0.7.13"
-LABEL description="Burrow-Wheeler Aligner for pairwise alignment between DNA sequences"
-LABEL website="http://bio-bwa.sourceforge.net/"
-LABEL documentation="http://bio-bwa.sourceforge.net/"
-LABEL license="http://bio-bwa.sourceforge.net/"
-LABEL tags="Genomics"
+LABEL about.summary="Burrow-Wheeler Aligner for pairwise alignment between DNA sequences"
+LABEL about.home="http://bio-bwa.sourceforge.net/"
+LABEL about.documentation="http://bio-bwa.sourceforge.net/"
+LABEL about.license_file="http://bio-bwa.sourceforge.net/"
+LABEL about.license="SPDX:GPL-3.0"
+LABEL extra.identifiers.biotools="bwa"
+LABEL about.tags="Genomics"
 
 ################## MAINTAINER ######################
 

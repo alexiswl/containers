@@ -1,16 +1,18 @@
 ################## BASE IMAGE ######################
-FROM biocontainers/biocontainers:latest
+FROM biocontainers/biocontainers:v1.0.0_cv4
 
 ################## METADATA ######################
-LABEL base.image="biocontainers:latest"
-LABEL version="3"
+LABEL base_image="biocontainers:v1.0.0_cv4"
+LABEL version="4"
 LABEL software="TPP"
 LABEL software.version="5.0"
-LABEL description="a collection of integrated tools for MS/MS proteomics"
-LABEL website="http://tools.proteomecenter.org/wiki/index.php?title=Software:TPP"
-LABEL documentation="http://tools.proteomecenter.org/wiki/index.php?title=Software:TPP"
-LABEL license="http://tools.proteomecenter.org/wiki/index.php?title=Software:TPP"
-LABEL tags="Proteomics"
+LABEL about.summary="a collection of integrated tools for MS/MS proteomics"
+LABEL about.home="http://tools.proteomecenter.org/wiki/index.php?title=Software:TPP"
+LABEL about.documentation="http://tools.proteomecenter.org/wiki/index.php?title=Software:TPP"
+LABEL about.license_file="https://www.gnu.org/licenses/lgpl-3.0.en.html"
+LABEL about.license="SPDX:GPL-3.0-only"
+LABEL about.tags="Proteomics"
+LABEL extra.identifiers.biotools="tpp"
 
 ################## MAINTAINER ######################
 MAINTAINER Felipe da Veiga Leprevost <felipe@leprevost.com.br>

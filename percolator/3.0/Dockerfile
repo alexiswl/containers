@@ -1,16 +1,18 @@
 ################## BASE IMAGE ######################
-FROM biocontainers/biocontainers:latest
+FROM biocontainers/biocontainers:v1.0.0_cv4
 
 ################## METADATA ######################
-LABEL base.image="biocontainers:latest"
-LABEL version="3"
+LABEL base_image="biocontainers:v1.0.0_cv4"
+LABEL version="4"
 LABEL software="Percolator"
 LABEL software.version="3.0"
-LABEL description="Semi-supervised learning for peptide identification from shotgun proteomics datasets"
-LABEL website="http://percolator.ms/"
-LABEL documentation="http://percolator.ms/"
-LABEL license="http://percolator.ms/"
-LABEL tags="Proteomics"
+LABEL about.summary="Semi-supervised learning for peptide identification from shotgun proteomics datasets"
+LABEL about.home="http://percolator.ms/"
+LABEL about.documentation="http://percolator.ms/"
+LABEL about.license_file="https://github.com/percolator/percolator/blob/master/license.txt"
+LABEL about.license="SPDX:Apache-2.0"
+LABEL about.tags="Proteomics"
+LABEL extra.identifiers.biotools="percolator"
 
 ################## MAINTAINER ######################
 MAINTAINER Felipe da Veiga Leprevost <felipe@leprevost.com.br>

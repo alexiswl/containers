@@ -1,16 +1,19 @@
-FROM biocontainers/"biocontainers:latest
+FROM biocontainers/biocontainers:v1.0.0_cv4
 
 ################################### METADATA ######################  ######################
 
-LABEL base.image="biocontainers:latest"
-LABEL version="1"
+LABEL base_image="biocontainers:v1.0.0_cv4"
+LABEL version="3"
 LABEL software="tophat"
 LABEL software.version="2.1.1"
-LABEL description="TopHat is a fast splice junction mapper for RNA-Seq reads"
-LABEL website="https://ccb.jhu.edu/software/tophat/index.shtml"
-LABEL documentation="https://ccb.jhu.edu/software/tophat/index.shtml"
-LABEL license="https://opensource.org/licenses/Artistic-2.0"
-LABEL tags="Genomics, Transcriptomics"
+LABEL about.summary="TopHat is a fast splice junction mapper for RNA-Seq reads"
+LABEL about.home="https://ccb.jhu.edu/software/tophat/index.shtml"
+LABEL about.documentation="https://ccb.jhu.edu/software/tophat/index.shtml"
+LABEL about.license_file="https://opensource.org/licenses/Artistic-2.0"
+LABEL about.license="SPDX:Artistic-2.0"
+LABEL about.tags="Genomics, Transcriptomics"
+LABEL extra.identifiers.biotools="tophat"
+LABEL extra.binaries="tophat"
 
 ################## BEGIN INSTALLATION ######################
 
@@ -29,7 +32,7 @@ RUN wget $URL/$TAR -O $DST/$TAR && \
 WORKDIR /data
 
 # DEFINE DEFAULT COMMAND
-CMD ["tophat"]
+# CMD ["tophat"]
 
 ##################### INSTALLATION END #####################
 

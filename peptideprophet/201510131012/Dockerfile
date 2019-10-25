@@ -1,16 +1,20 @@
 ################## BASE IMAGE ######################
-FROM biocontainers/biocontainers:latest
+FROM biocontainers/biocontainers:v1.0.0_cv4
 
 ################## METADATA ######################
-LABEL base.image="biocontainers:latest"
-LABEL version="1"
+
+LABEL base_image="biocontainers:v1.0.0_cv4"
+LABEL version="3"
 LABEL software="PeptideProphet"
 LABEL software.version="201510131012"
-LABEL description="Peptide assignment statistics and validation"
-LABEL website="http://peptideprophet.sourceforge.net/"
-LABEL documentation="http://peptideprophet.sourceforge.net/"
-LABEL license="http://peptideprophet.sourceforge.net/"
-LABEL tags="Proteomics"
+LABEL about.summary="Peptide assignment statistics and validation"
+LABEL about.home="http://peptideprophet.sourceforge.net/"
+LABEL about.documentation="http://peptideprophet.sourceforge.net/"
+LABEL about.license_file="http://peptideprophet.sourceforge.net/"
+LABEL about.license="SPDX:GPL-2.0-only"
+LABEL about.tags="Proteomics"
+LABEL extra.identifiers.biotools="peptideprophet"
+LABEL extra.binaries="PeptideProphet"
 
 ################## MAINTAINER ######################
 MAINTAINER Felipe da Veiga Leprevost <felipe@leprevost.com.br>
@@ -29,4 +33,4 @@ ENV PATH /home/biodocker/bin:$PATH
 
 WORKDIR /data/
 
-CMD ["PeptideProphet"]
+# CMD ["PeptideProphet"]

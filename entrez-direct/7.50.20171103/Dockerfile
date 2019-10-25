@@ -1,16 +1,17 @@
 ################## BASE IMAGE ######################
-FROM biocontainers/biocontainers:latest
+FROM biocontainers/biocontainers:v1.0.0_cv4
 
 ################## METADATA ######################
-LABEL base.image="biocontainers:latest"
-LABEL version="3"
+LABEL base_image="biocontainers:v1.0.0_cv4"
+LABEL version="5"
 LABEL software="entrez-direct"
 LABEL software.version="7.50.20171103"
-LABEL description="Entrez Direct (EDirect) is an advanced method for accessing the NCBI's set of interconnected Entrez databases"
-LABEL website="https://github.com/ncbi/magicblast"
-LABEL documentation="https://ncbi.github.io/magicblast/"
+LABEL about.summary="Entrez Direct (EDirect) is an advanced method for accessing the NCBI's set of interconnected Entrez databases"
+LABEL about.home="https://github.com/ncbi/magicblast"
+LABEL about.documentation="https://ncbi.github.io/magicblast/"
 LABEL License_file = "https://ncbi.github.io/magicblast/"
-LABEL tags="BLAST"
+LABEL extra.identifiers.biotools="entrez"
+LABEL about.tags="BLAST"
 
 ################## MAINTAINER ######################
 MAINTAINER Roberto Vera Alvarez <r78v10a07@gmail.com>
@@ -41,4 +42,4 @@ RUN cd $DST && \
 
 WORKDIR /data/
 
-CMD ["esearch"]
+# CMD ["esearch"]

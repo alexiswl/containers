@@ -1,16 +1,19 @@
 ################## BASE IMAGE ######################
-FROM biocontainers/biocontainers:latest
+FROM biocontainers/biocontainers:v1.0.0_cv4
 
 ################## METADATA ######################
-LABEL base.image="biocontainers:latest"
-LABEL version="2"
+LABEL base_image="biocontainers:v1.0.0_cv4"
+LABEL version="4"
 LABEL software="ProteinProphet"
 LABEL software.version="201510131012"
-LABEL description="Protein inference for MS/MS analysis"
-LABEL website="http://proteinprophet.sourceforge.net/"
-LABEL documentation="http://proteinprophet.sourceforge.net/"
-LABEL license="http://proteinprophet.sourceforge.net/"
-LABEL tags="Proteomics"
+LABEL about.summary="Protein inference for MS/MS analysis"
+LABEL about.home="http://proteinprophet.sourceforge.net/"
+LABEL about.documentation="http://proteinprophet.sourceforge.net/"
+LABEL about.license_file="http://proteinprophet.sourceforge.net/"
+LABEL about.license="SPDX:GPL-2.0-only"
+LABEL extra.identifiers.biotools="proteinprophet"
+LABEL about.tags="Proteomics"
+LABEL extra.binaries="ProteinProphet"
 
 ################## MAINTAINER ######################
 MAINTAINER Felipe da Veiga Leprevost <felipe@leprevost.com.br>
@@ -43,4 +46,4 @@ ENV PATH /home/biodocker/bin:$PATH
 
 WORKDIR /data/
 
-CMD ["ProteinProphet"]
+# CMD ["ProteinProphet"]
